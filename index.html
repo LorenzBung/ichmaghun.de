@@ -1,14 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Wuff</title>
     <style>
       body {
-        margin: 0 px;
+        margin: 0px;
+		background-image: url("doge.webp");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-size: cover;
+		background-attachment: scroll;
       }
     </style>
+	<script defer>
+	document.onclick = function() {
+	  let rand = Math.floor(Math.random() * 4);
+	  let audio = new Audio("woof" + (rand+1) + ".mp3");
+	  audio.play();
+	}
+	</script>
   </head>
   <body>
-    <img src="doge.webp" width="100%">
   </body>
 </html>
